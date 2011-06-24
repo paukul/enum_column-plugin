@@ -210,7 +210,6 @@ CREATE TABLE `keyboards` (
   `name` varchar(50) default NULL
 );
 
-<<<<<<< .mine
 CREATE TABLE `enumerations` (
   `id` INTEGER NOT NULL auto_increment PRIMARY KEY,
   `severity` enum('low', 'medium', 'high', 'critical') DEFAULT 'medium',
@@ -220,18 +219,12 @@ CREATE TABLE `enumerations` (
 ) TYPE=InnoDB;
 
 --Altered lock_version column name.
-=======
--- Altered lock_version column name.
->>>>>>> .r3595
 CREATE TABLE `legacy_things` (
   `id` int(11) NOT NULL auto_increment,
   `tps_report_number` int(11) default NULL,
   `version` int(11) NOT NULL default 0,
   PRIMARY KEY  (`id`)
 ) TYPE=InnoDB;
-<<<<<<< .mine
-
-=======
 
 CREATE TABLE `numeric_data` (
   `id` INTEGER NOT NULL auto_increment PRIMARY KEY,
@@ -241,4 +234,3 @@ CREATE TABLE `numeric_data` (
   `my_house_population` decimal(2),
   `decimal_number_with_default` decimal(3,2) DEFAULT 2.78
 ) TYPE=InnoDB;
->>>>>>> .r4885

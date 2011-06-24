@@ -1,7 +1,7 @@
 require File.dirname(__FILE__) + '/test_helper'
 require 'fixtures/enumeration'
 
-class EnumerationsTest < Test::Unit::TestCase
+class EnumerationsTest < ActiveSupport::TestCase
   class EnumController < ActionController::Base
     def test1
       @test = Enumeration.new
@@ -214,7 +214,7 @@ class EnumerationsTest < Test::Unit::TestCase
   end
 
   def test_quoting
-    value = ActiveRecord::Base.send(:sanitize_sql, ["value = ? ", :"'" ] )
-    assert_equal "value = '\\'' ", value
+    value = Enumeration.send(:sanitize_sql, ["value = ? ", :"'" ] )
+    assert_equal "value = '''' ", value
   end
 end
